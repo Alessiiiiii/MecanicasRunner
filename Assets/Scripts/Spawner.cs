@@ -5,6 +5,7 @@ public class Spawner : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField]
     GameObject[] Piso;
+    
     void Start()
     {
         
@@ -18,7 +19,7 @@ public class Spawner : MonoBehaviour
     public void SpawnPiso()
         {
         int randomIndex=Random.Range(0, Piso.Length);
-        GameObject Piso = Instantiate(Piso[randomIndex], transform.position, Quaternion.identity);
+        GameObject Piso = Instantiate(Piso [randomIndex], transform.position, Quaternion.identity);
         Piso.transform.SetParent(transform);
         }   
 }
