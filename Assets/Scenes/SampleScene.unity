@@ -777,9 +777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 549a6735be271904fa1749c07dc7ebe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Piso:
-  - {fileID: 6300625258871671876, guid: 7513a7d8811a0614d9bd28206f27b725, type: 3}
-  - {fileID: 3086191927325416168, guid: 64229ef1ff271c941b944bf004475a40, type: 3}
+  Bloke: []
 --- !u!1001 &1929628178
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1015,6 +1013,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piso (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3659833933090766242, guid: 64229ef1ff271c941b944bf004475a40, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1028,6 +1030,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5723615448382384910, guid: 7513a7d8811a0614d9bd28206f27b725, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6300625258871671876, guid: 7513a7d8811a0614d9bd28206f27b725, type: 3}
       propertyPath: m_Name
       value: Piso
