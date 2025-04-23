@@ -16,12 +16,12 @@ public class rigidbody : MonoBehaviour
     public int collectedItems;
 
     public TMPro.TextMeshProUGUI scoreText;
-    public TMPro.TextMeshProUGUI warningText;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        warningText.enabled = false;
+        
         Rigidbody = GetComponent<Rigidbody>();
         CanJump = true;
 
@@ -55,15 +55,12 @@ public class rigidbody : MonoBehaviour
             CanJump = true;
         }
 
-        if (collision.gameObject.CompareTag("KillZone"))
+        if (collision.gameObject.CompareTag("Obstacule"))
         {
-            Debug.Log("Kill Mee");
+            
             SceneManager.LoadScene(0);
         }
-        if (collision.gameObject.CompareTag("Goal"))
-        {
-            SceneManager.LoadScene("Win");
-        }
+        
 
         if (collision.gameObject.CompareTag("Item"))
         {
@@ -83,20 +80,20 @@ public class rigidbody : MonoBehaviour
             collectedItems++;
             scoreText.text = collectedItems.ToString();
         }
-        if (other.gameObject.CompareTag("Goal"))
-        {
-            warningText.enabled = true;
-        }
+        
+        
+           
+        
     }
     private void OnTriggerExit(Collider other)
     {
         Debug.Log("Trigger Exit:" + other.gameObject.name);
 
 
-        if (other.gameObject.CompareTag("Goal"))
-        {
-            warningText.enabled = false;
-        }
+      
+        
+            
+        
     }
     private void OnTriggerStay(Collider other)
     {
